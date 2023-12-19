@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login with Google Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Login with Google</h2>
+
+<button onclick="loginWithGoogle()">Login with Google</button>
+
+<script>
+    function loginWithGoogle() {
+        // Redirect to Google OAuth URL
+        window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email%20profile';
+    }
+
+    // After the user logs in, Google will redirect back to YOUR_REDIRECT_URI with a code
+    // You would handle this code on your server to complete the authentication process
+
+    // For a production environment, you should use a backend server to handle OAuth flow securely.
+</script>
+
+</body>
+</html>
